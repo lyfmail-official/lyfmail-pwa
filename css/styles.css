@@ -1,0 +1,269 @@
+:root {
+  --primary: #0B5ED7;
+  --primary-dark: #0849A9;
+  --light: #ffffff;
+  --dark: #1a1a1a;
+  --gray: #f5f7fb;
+  --border: #dcdcdc;
+  --radius: 14px;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--gray);
+  color: var(--dark);
+}
+
+/* HEADER */
+.app-header {
+  width: 100%;
+  background: #ffffff;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-actual {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* MAIN */
+.app-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* H1 */
+.page-title {
+  margin: 10px 0 14px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* INSTALL BUTTON */
+.install-app-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--primary);
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.install-app-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* INTRO */
+.intro p {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* TITLES */
+.trending h2,
+.categories h2 {
+  margin: 10px 0 8px;
+  font-size: 1.3rem;
+}
+
+/* TRENDING LIST */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.news-loading {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.news-item {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+}
+
+.news-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.news-title {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.news-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* CATEGORY CARDS */
+.categories {
+  margin-top: 10px;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.card.secondary {
+  background: #eef4ff; /* Light mode blue background */
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.card p {
+  margin: 0 0 10px;
+  font-size: 0.93rem;
+  color: #333;
+}
+
+.card button {
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 14px;
+  background: var(--primary);
+  color: var(--light);
+  font-size: 0.94rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.card.secondary button {
+  background: #198754; /* Green */
+}
+
+.card button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* FOOTER */
+.app-footer {
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.app-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 700px) {
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+/* ------------------------------------------------------
+   DARK MODE FIXES — Including Knowledge Hub Card
+------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #101010;
+    color: #eee;
+  }
+
+  .app-header {
+    background: #181818;
+    border-bottom-color: #333;
+  }
+
+  .page-title {
+    color: #fff;
+  }
+
+  .intro p,
+  .card p {
+    color: #ccc;
+  }
+
+  /* Regular cards */
+  .card {
+    background: #181818;
+    border-color: #333;
+  }
+
+  /* FIXED: Knowledge Hub "secondary" card in Dark Mode */
+  .card.secondary {
+    background: #1c2533;   /* Deep blueish-dark */
+    border-color: #2b3a4d;
+  }
+
+  .card.secondary h3 {
+    color: #7cb8ff;  /* Light blue */
+  }
+
+  /* Trending items */
+  .news-item {
+    background: #181818;
+    border-color: #333;
+  }
+
+  .news-item:hover {
+    background: #1f1f1f;
+  }
+
+  .app-footer {
+    color: #aaa;
+  }
+}
+
