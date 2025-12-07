@@ -16,7 +16,8 @@ This PWA allows users to access LYF Mail directly from their home screen, enjoy 
 
 📁 Project Structure
 
-example.com/
+```bash
+app.lyfmail.com/
 │
 ├── index.php
 ├── manifest.php
@@ -44,6 +45,8 @@ example.com/
         ├── og-lyfmail-app.jpg
         ├── twitter-lyfmail-app.jpg
         └── screenshot-lyfmail-app.png
+```
+
 
 🚀 Features
     • Installable on any device (A2HS – Add to Home Screen)
