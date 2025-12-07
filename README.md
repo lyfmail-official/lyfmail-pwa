@@ -64,23 +64,25 @@ example.com/
 📦 Installation (For Developers)
 1. Clone the Repository
 git clone https://github.com/lyfmail-official/lyfmail-pwa.git
+
 cd lyfmail-pwa
-2. No Build Tools Required
+
+3. No Build Tools Required
 This PWA does not require npm, composer, bundlers, or frameworks.
 It works on any Linux server with:
     • PHP 7+
     • HTTPS enabled
 
-3. Deploy to Your Server
+4. Deploy to Your Server
 Upload all files to your hosting:
 public_html/
 or
 your-subdomain/
 or
 app.domain.com/
-4. Ensure HTTPS is Active
+5. Ensure HTTPS is Active
 PWAs require SSL to install on devices.
-5. Register the Service Worker
+6. Register the Service Worker
 Ensure this code exists inside <head> of index.php:
 <link rel="manifest" href="/manifest.php">
 
