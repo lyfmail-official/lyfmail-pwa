@@ -1,0 +1,36 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore local development files
+*.log
+*.env
+.env.*
+.vscode/
+.idea/
+*.cache
+
+# Ignore build directories (if you add build tools in future)
+node_modules/
+dist/
+build/
+
+# Ignore backup files
+*.bak
+*.tmp
+*.old
+
+# Ignore composer (if not used)
+vendor/
+
+# Ignore OS generated files
+ehthumbs.db
+Desktop.ini
+
+# Ignore temporary files from editors
+*.swp
+*.swo
+
+# Ignore cache folders (if created manually)
+cache/
+tmp/
