@@ -128,3 +128,6 @@ Upload the `build/` or `public/` folder to your server.
 
 We welcome contributions!
 
+## 📱 App Preview
+
+![LYF Mail App Preview](assets/seo/screenshot-lyfmail-app.png)
